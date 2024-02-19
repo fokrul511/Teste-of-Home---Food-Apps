@@ -12,7 +12,7 @@ class Recipes {
   List<String>? tags;
   int? userId;
   String? image;
-  // double? rating;
+  double? rating;
   int? reviewCount;
   List<String>? mealType;
 
@@ -30,7 +30,7 @@ class Recipes {
       this.tags,
       this.userId,
       this.image,
-      // this.rating,
+      this.rating,
       this.reviewCount,
       this.mealType});
 
@@ -48,7 +48,7 @@ class Recipes {
     tags = json['tags'].cast<String>();
     userId = json['userId'];
     image = json['image'];
-    // rating = json['rating'];
+    rating = json['rating'] is int ? (json['rating'] as int).toDouble() : json['rating'];
     reviewCount = json['reviewCount'];
     mealType = json['mealType'].cast<String>();
   }
@@ -68,7 +68,7 @@ class Recipes {
     data['tags'] = this.tags;
     data['userId'] = this.userId;
     data['image'] = this.image;
-    // data['rating'] = this.rating;
+    data['rating'] = this.rating;
     data['reviewCount'] = this.reviewCount;
     data['mealType'] = this.mealType;
     return data;
