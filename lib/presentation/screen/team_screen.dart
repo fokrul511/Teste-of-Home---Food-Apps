@@ -19,9 +19,7 @@ class TeamScreen extends StatelessWidget {
         "image": "assets/sing.jpeg",
       },
     ];
-    // "Farjana Akter Jui",
-    // "Kamrun Laila",
-    // "Srabonti Sinha",
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Team Members"),
