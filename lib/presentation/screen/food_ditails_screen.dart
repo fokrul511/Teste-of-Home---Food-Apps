@@ -5,7 +5,7 @@ import 'package:food_maker_apps/presentation/widgets/widget.dart';
 class FoodDitailsScreen extends StatefulWidget {
   Recipes recipes;
 
-  FoodDitailsScreen(this.recipes);
+  FoodDitailsScreen(this.recipes, {super.key});
 
   @override
   State<FoodDitailsScreen> createState() => _FoodDitailsScreenState();
@@ -76,17 +76,17 @@ class _FoodDitailsScreenState extends State<FoodDitailsScreen> {
                 texts(
                   title: 'Servings:',
                   icon: Icons.people_outline,
-                  text: "${widget.recipes.servings.toString()}",
+                  text: widget.recipes.servings.toString(),
                 ),
                 texts(
                   title: 'Calories Per Serving:',
                   icon: Icons.fastfood_rounded,
-                  text: "${widget.recipes.caloriesPerServing.toString()}",
+                  text: widget.recipes.caloriesPerServing.toString(),
                 ),
                 texts(
                   title: 'Cuisine Country:',
                   icon: Icons.restaurant,
-                  text: "${widget.recipes.cuisine.toString()}",
+                  text: widget.recipes.cuisine.toString(),
                 ),
                 const Divider(
                   thickness: 1,
@@ -94,12 +94,12 @@ class _FoodDitailsScreenState extends State<FoodDitailsScreen> {
                 texts(
                   title: 'Difficulty:',
                   icon: Icons.restaurant_menu_sharp,
-                  text: "${widget.recipes.difficulty.toString()}",
+                  text: widget.recipes.difficulty.toString(),
                 ),
                 texts(
                   title: 'Meal Type:',
                   icon: Icons.set_meal_rounded,
-                  text: "${widget.recipes.mealType.toString()}",
+                  text: widget.recipes.mealType.toString(),
                 ),
               ],
             ),
@@ -133,7 +133,7 @@ class _FoodDitailsScreenState extends State<FoodDitailsScreen> {
   Widget instructionitems() {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Container(
+      child: SizedBox(
         height: 350,
         width: double.infinity,
         child: ListView.builder(
@@ -157,7 +157,7 @@ class _FoodDitailsScreenState extends State<FoodDitailsScreen> {
   Widget ingrdentItems() {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Container(
+      child: SizedBox(
         height: 300,
         width: 300,
         child: ListView.builder(

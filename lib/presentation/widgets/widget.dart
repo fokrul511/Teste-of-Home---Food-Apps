@@ -7,20 +7,20 @@ texts({title, text, icon}) {
       children: [
         Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 18,
           ),
         ),
-        SizedBox(width: 10,),
+        const SizedBox(width: 10,),
         Icon(
           icon,
           color: Colors.blue,
           size: 18,
         ),
-        SizedBox(width: 7),
+        const SizedBox(width: 7),
         Text(
           text,
-          style: TextStyle(color: Colors.black,fontSize: 18),
+          style: const TextStyle(color: Colors.black,fontSize: 18),
         ),
       ],
     ),

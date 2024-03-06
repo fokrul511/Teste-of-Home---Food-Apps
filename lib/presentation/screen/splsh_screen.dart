@@ -12,12 +12,12 @@ class _SpalshScreenState extends State<SpalshScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 2)).then((value) => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => FoodListScreen(),)));
+    Future.delayed(const Duration(seconds: 2)).then((value) => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const FoodListScreen(),)));
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SizedBox(
         height: double.infinity,
         width: double.infinity,

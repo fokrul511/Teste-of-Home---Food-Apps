@@ -54,23 +54,23 @@ class Recipes {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['ingredients'] = this.ingredients;
-    data['instructions'] = this.instructions;
-    data['prepTimeMinutes'] = this.prepTimeMinutes;
-    data['cookTimeMinutes'] = this.cookTimeMinutes;
-    data['servings'] = this.servings;
-    data['difficulty'] = this.difficulty;
-    data['cuisine'] = this.cuisine;
-    data['caloriesPerServing'] = this.caloriesPerServing;
-    data['tags'] = this.tags;
-    data['userId'] = this.userId;
-    data['image'] = this.image;
-    data['rating'] = this.rating;
-    data['reviewCount'] = this.reviewCount;
-    data['mealType'] = this.mealType;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    data['ingredients'] = ingredients;
+    data['instructions'] = instructions;
+    data['prepTimeMinutes'] = prepTimeMinutes;
+    data['cookTimeMinutes'] = cookTimeMinutes;
+    data['servings'] = servings;
+    data['difficulty'] = difficulty;
+    data['cuisine'] = cuisine;
+    data['caloriesPerServing'] = caloriesPerServing;
+    data['tags'] = tags;
+    data['userId'] = userId;
+    data['image'] = image;
+    data['rating'] = rating;
+    data['reviewCount'] = reviewCount;
+    data['mealType'] = mealType;
     return data;
   }
 }

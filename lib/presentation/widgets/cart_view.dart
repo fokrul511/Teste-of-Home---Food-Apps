@@ -39,6 +39,7 @@ class RecipeCart extends StatelessWidget {
       child: Stack(
         children: [
           Align(
+            alignment: Alignment.center,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 5.0),
               child: Text(
@@ -53,7 +54,6 @@ class RecipeCart extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            alignment: Alignment.center,
           ),
           Align(
             alignment: Alignment.bottomLeft,

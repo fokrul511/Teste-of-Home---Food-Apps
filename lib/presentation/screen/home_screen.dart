@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:food_maker_apps/presentation/model/data.dart';
 import 'package:food_maker_apps/presentation/screen/food_ditails_screen.dart';
+import 'package:food_maker_apps/presentation/screen/team_screen.dart';
 import 'package:food_maker_apps/presentation/widgets/cart_view.dart';
 import 'package:http/http.dart';
 
@@ -33,12 +34,23 @@ class _FoodListScreenState extends State<FoodListScreen> {
             itemBuilder: (context) => [
               const PopupMenuItem(
                 child: Text('Setting'),
-              ),const PopupMenuItem(
+              ),
+              const PopupMenuItem(
                 child: Text('Copy Link'),
-              ),const PopupMenuItem(
+              ),
+              const PopupMenuItem(
                 child: Text('Shere'),
-              ), const PopupMenuItem(
-                child: Text('Developer Info'),
+              ),
+               PopupMenuItem(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const TeamScreen(),
+                    ),
+                  );
+                },
+                child: const Text('Developer Info'),
               ),
             ],
           )
