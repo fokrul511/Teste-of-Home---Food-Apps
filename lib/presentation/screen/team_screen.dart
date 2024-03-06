@@ -6,11 +6,22 @@ class TeamScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List teamList = [
-      "Farjana Akter Jui",
-      "Kamrun Laila",
-      "Srabonti Sinha",
+      {
+        "name": "Farjana Akter Jui",
+        "image": "assets/jui.jpeg",
+      },
+      {
+        "name": "Kamrun Laila",
+        "image": "assets/laila.jpeg",
+      },
+      {
+        "name": "Srabonti Sinha",
+        "image": "assets/sing.jpeg",
+      },
     ];
-
+    // "Farjana Akter Jui",
+    // "Kamrun Laila",
+    // "Srabonti Sinha",
     return Scaffold(
       appBar: AppBar(
         title: const Text("Team Members"),
@@ -31,18 +42,15 @@ class TeamScreen extends StatelessWidget {
                         const SizedBox(
                           height: 30,
                         ),
-                        const CircleAvatar(
-                          minRadius: 50,
-                          child: Icon(
-                            Icons.person,
-                            size: 50,
-                          ),
+                        CircleAvatar(
+                          radius: 60,
+                          backgroundImage: AssetImage(teamList[index]["image"]),
                         ),
                         const SizedBox(
                           height: 20,
                         ),
                         Text(
-                          teamList[index],
+                          teamList[index]["name"],
                           style: const TextStyle(
                             fontSize: 30,
                             fontWeight: FontWeight.w500,
